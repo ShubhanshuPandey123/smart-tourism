@@ -1,6 +1,6 @@
 
 document.addEventListener("DOMContentLoaded", () => {
-  const API_BASE_URL = "http://localhost:5000/api"; // backend base URL
+ const API_BASE_URL = "https://my-file-1-rjz1.onrender.com/api";
   const ADMIN_TOKEN_KEY = "adminToken"; // your token key in localStorage
 
   // ----------------------------
@@ -94,8 +94,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const div = document.createElement("div");
         div.className = "admin-place-card";
         div.innerHTML = `
-         <img src="http://localhost:5000/uploads/${place.image}" alt="${place.name}" style="width:200px;height:120px;object-fit:cover;">
-
+       <img src="https://my-file-1-rjz1.onrender.com/uploads/${place.image}" alt="${place.name}" style="width:200px;height:120px;object-fit:cover;">
           <h3>${place.name}</h3>
           <p>${place.description}</p>
           <button data-id="${place._id}" class="deleteBtn">Delete</button>
