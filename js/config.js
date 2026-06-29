@@ -5,7 +5,7 @@
   Change values here only when backend changes
 */
 
-const API_BASE_URL = "http://localhost:5000/api";
+const API_BASE_URL = "https://my-file-1-rjz1.onrender.com";
 
 // Token keys (used everywhere)
 const USER_TOKEN_KEY = "token";
