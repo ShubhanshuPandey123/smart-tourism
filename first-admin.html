@@ -44,7 +44,9 @@
     }
   </style>
 </head>
+
 <body>
+
 
 <form id="adminSetupForm">
   <h2>One-Time Admin Setup</h2>
@@ -55,6 +57,7 @@
 </form>
 
 <script>
+  const API_BASE_URL = "https://my-file-1-rjz1.onrender.com";
   const form = document.getElementById("adminSetupForm");
   const messageDiv = document.getElementById("message");
 
@@ -65,7 +68,7 @@
     const password = document.getElementById("password").value;
 
     try {
-      const res = await fetch("http://localhost:5000/api/admin/setup", {
+       const res = await fetch(`${API_BASE_URL}/api/admin/setup`, {
         method: "POST", // make sure your route accepts POST
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email, password }),
