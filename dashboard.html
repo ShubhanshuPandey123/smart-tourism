@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dashboard</title>
+
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Leaflet CSS -->
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet/dist/leaflet.css"
+  />
+</head>
+<body>
+    <div style="display:flex; justify-content: flex-end; padding: 20px;">
+  <button id="logoutBtn" style="width:auto; padding:10px 20px;">
+    Logout
+  </button>
+</div>
+
+<h2>Select City from Map</h2>
+
+<div id="map" style="height: 400px; width: 80%; margin: auto;"></div>
+
+<p id="selectedCity" style="text-align:center; font-weight:bold;"></p>
+
+<div style="text-align:center;">
+  <button id="exploreBtn" disabled>Explore</button>
+</div>
+
+<!-- Leaflet JS -->
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+<script src="js/config.js"></script>
+<script src="js/dashboard.js"></script>
+
+</body>
+</html>

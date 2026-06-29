@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<h2 class="admin-title">Admin Dashboard</h2>
+
+<!-- Add Place Form -->
+<form id="addPlaceForm" enctype="multipart/form-data">
+  <input type="text" id="city" placeholder="City" required>
+  <input type="text" id="name" placeholder="Place Name" required>
+  <textarea id="description" placeholder="Description"></textarea>
+  <input type="file" id="image" required>
+  <button>Add Place</button>
+</form>
+
+<hr style="margin:40px 0; border-color:rgba(255,255,255,0.2)">
+
+<!-- Dynamic City Selection for Listing -->
+<div style="margin:20px 0;">
+  <label for="selectCity">Select City to View Places:</label>
+  <select id="selectCity">
+    <option value="">-- Select City --</option>
+  </select>
+</div>
+
+<!-- Container for Places -->
+<div id="adminPlacesContainer"></div>
+
+<!-- Logout Button -->
+<div style="margin-top:40px; text-align:right;">
+  <button id="adminLogoutBtn">Logout</button>
+</div>
+
+<script src="../js/config.js"></script>
+<script src="../js/admin-dashboard.js"></script>
+
+</body>
+</html>
