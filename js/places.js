@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   `;
 
   const img = document.createElement("img");
-  img.src = `${API_BASE_URL}/uploads/${p.image}`;  /
+  img.src = `${API_BASE_URL}/uploads/${p.image}`;  
   img.alt = p.name;
   img.width = 250;
 
