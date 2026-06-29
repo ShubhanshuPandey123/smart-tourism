@@ -1,6 +1,6 @@
 
 document.addEventListener("DOMContentLoaded", () => {
- const API_BASE_URL = "https://my-file-1-rjz1.onrender.com/api";
+ const API_BASE_URL = "https://my-file-1-rjz1.onrender.com";
   const ADMIN_TOKEN_KEY = "adminToken"; // your token key in localStorage
 
   // ----------------------------
@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
     formData.append("image", document.getElementById("image").files[0]);
 
     try {
-      const res = await fetch(`${API_BASE_URL}/places/admin/places`, {
+      const res = await fetch(`${API_BASE_URL}/api/places/admin/places`, {
         method: "POST",
         headers: {
           "Authorization": `Bearer ${localStorage.getItem(ADMIN_TOKEN_KEY)}`
@@ -54,7 +54,7 @@ document.addEventListener("DOMContentLoaded", () => {
   async function loadCities() {
     if (!selectCity) return;
     try {
-      const res = await fetch(`${API_BASE_URL}/places/admin/cities`, {
+      const res = await fetch(`${API_BASE_URL}/api/places/admin/cities`, {
         headers: {
           "Authorization": `Bearer ${localStorage.getItem(ADMIN_TOKEN_KEY)}`
         }
@@ -85,7 +85,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (!city) return;
 
     try {
-      const res = await fetch(`${API_BASE_URL}/places/${city}`, {
+      const res = await fetch(`${API_BASE_URL}/api/places/${city}`, {
         headers: { "Authorization": `Bearer ${localStorage.getItem(ADMIN_TOKEN_KEY)}` }
       });
       const places = await res.json();
@@ -109,7 +109,7 @@ document.addEventListener("DOMContentLoaded", () => {
           if (!confirm("Are you sure you want to delete this place?")) return;
 
           try {
-            const res = await fetch(`${API_BASE_URL}/places/admin/places/${id}`, {
+            const res = await fetch(`${API_BASE_URL}/api/places/admin/places/${id}`, {
               method: "DELETE",
               headers: { "Authorization": `Bearer ${localStorage.getItem(ADMIN_TOKEN_KEY)}` }
             });

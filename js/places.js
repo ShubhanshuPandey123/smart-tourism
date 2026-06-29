@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   try {
     // Fetch places from backend (city as query param, lowercase)
-    const res = await fetch(`${API_BASE_URL}/places?city=${city.toLowerCase()}`, {
+    const res = await fetch(`${API_BASE_URL}/api/places?city=${city.toLowerCase()}`, {
       headers: { "Authorization": `Bearer ${token}` }
     });
 
